@@ -23,11 +23,12 @@ Avant de commencer à travailler sur ce projet, assurez-vous que vous disposez d
 - **MySQL** (ou toute autre base de données relationnelle) : Pour héberger les données des utilisateurs et des conversations.
 
 ## Étapes d'installation
-1. **Clonez le repository** :
-   Ouvrez votre terminal et clonez ce repository en utilisant la commande suivante :
+1. **Clonez le repository** :  
+   Ouvrez votre terminal et clonez uniquement les branches nécessaires en utilisant les commandes suivantes :  
+
    ```bash
-   git clone https://github.com/fatimaamrch/motivational_chat.git
-   cd motivational_chat
+   git clone -b api --single-branch https://github.com/allanthieryd/JavaExamen.git
+   git clone -b app --single-branch https://github.com/allanthieryd/JavaExamen.git
 Configurez votre base de données :
 
 Créez une base de données MySQL avec le nom motivation_chat_db.
