@@ -1,29 +1,27 @@
 package com.example.motivational_chat_app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
+import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+import java.time.LocalDateTime;
 
 @Entity
 public class Discussion {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     private String username;
     private String message;
     private String quote;
 
+    @CreationTimestamp // Hibernate gère automatiquement la date d'insertion
+    @Column(nullable = false, updatable = false)
+    private LocalDateTime createdAt;
+
     // Getters et setters
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getUsername() {
@@ -50,4 +48,7 @@ public class Discussion {
         this.quote = quote;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 }

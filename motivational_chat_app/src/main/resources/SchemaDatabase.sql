@@ -3,6 +3,7 @@ CREATE TABLE `discussion` (
   `message` varchar(255) DEFAULT NULL,
   `quote` varchar(255) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`)
 ) 
 

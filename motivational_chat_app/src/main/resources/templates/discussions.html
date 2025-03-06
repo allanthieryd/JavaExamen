@@ -114,6 +114,7 @@
                         <th>Nom d'utilisateur</th>
                         <th>Message</th>
                         <th>Citation</th>
+						<th>Date du message</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -121,6 +122,7 @@
                         <td th:text="${discussion.username}"></td>
                         <td th:text="${discussion.message}"></td>
                         <td th:text="${discussion.quote}"></td>
+						<td th:text="${#temporals.format(discussion.createdAt, 'dd/MM/yyyy HH:mm')}"></td>
                     </tr>
                 </tbody>
             </table>
